@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Debug\
+C:\CRCSharpProjects\quickdiff\QuickDiff\QuickDiff\obj\Debug\
 QuickDiff
 none
 false
 DEBUG;TRACE
-C:\CRCSharpProjects\QuickDiff\QuickDiff\App.xaml
+C:\CRCSharpProjects\quickdiff\QuickDiff\QuickDiff\App.xaml
 3343916413
 
 19-809392697
 14-629149121
 MainWindow.xaml;Resources\GlassButton.xaml;Views\FileItemsView.xaml;
 
-False
+True
 
