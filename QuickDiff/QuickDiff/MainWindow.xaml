@@ -1,0 +1,28 @@
+﻿<Window x:Class="QuickDiff.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:ViewModels"
+        xmlns:views="clr-namespace:Views"
+        Title="QuickDiff" Height="350" Width="525">
+    <Grid Background="Transparent">
+        <Grid.DataContext>
+            <vm:MainWindowViewModel/>
+        </Grid.DataContext>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.ColumnSpan="3" Orientation="Horizontal" Background="Transparent">
+            <Button Style="{DynamicResource ResourceKey=GlassButtonSquare}" Margin="2" Padding="12,2,12,2" Command="{Binding BackFolders}" Content="&lt;&lt;-"/>
+            <Button Style="{DynamicResource ResourceKey=GlassButtonSquare}" Margin="2" Padding="12,2,12,2" Command="{Binding RefreshFolders}" Content="Refresh"/>
+        </StackPanel>
+        <views:FileItemsView Grid.Row="1" DataContext="{Binding Path=FileItemsLeft}"/>
+        <views:FileItemsView Grid.Row="1" Grid.Column="2" DataContext="{Binding Path=FileItemsRight}"/>
+        <GridSplitter Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Width="5" Background="{DynamicResource ResourceKey=foregroundBrush}"/>
+    </Grid>
+</Window>

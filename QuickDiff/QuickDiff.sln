@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickDiff", "QuickDiff\QuickDiff.csproj", "{97D3A286-5032-49BA-8546-36EA250E4ACA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97D3A286-5032-49BA-8546-36EA250E4ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D3A286-5032-49BA-8546-36EA250E4ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D3A286-5032-49BA-8546-36EA250E4ACA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{97D3A286-5032-49BA-8546-36EA250E4ACA}.Debug|x86.Build.0 = Debug|Any CPU
+		{97D3A286-5032-49BA-8546-36EA250E4ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D3A286-5032-49BA-8546-36EA250E4ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D3A286-5032-49BA-8546-36EA250E4ACA}.Release|x86.ActiveCfg = Release|x86
+		{97D3A286-5032-49BA-8546-36EA250E4ACA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

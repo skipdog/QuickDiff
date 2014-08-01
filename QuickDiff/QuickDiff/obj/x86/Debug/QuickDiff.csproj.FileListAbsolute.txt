@@ -1,0 +1,17 @@
+C:\CRCSharpProjects\QuickDiff\QuickDiff\bin\Debug\QuickDiff.exe
+C:\CRCSharpProjects\QuickDiff\QuickDiff\bin\Debug\QuickDiff.pdb
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\MainWindow.g.cs
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\Views\FileItemsView.g.cs
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\App.g.cs
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\QuickDiff_MarkupCompile.cache
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\QuickDiff_MarkupCompile.lref
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\App.baml
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\MainWindow.baml
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\Views\FileItemsView.baml
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\QuickDiff.g.resources
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\QuickDiff.Properties.Resources.resources
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\QuickDiff.csproj.GenerateResource.Cache
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\QuickDiff.exe
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\QuickDiff.pdb
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\x86\Debug\Resources\GlassButton.baml

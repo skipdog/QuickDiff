@@ -1,0 +1,17 @@
+C:\CRCSharpProjects\QuickDiff\QuickDiff\bin\Release\QuickDiff.exe
+C:\CRCSharpProjects\QuickDiff\QuickDiff\bin\Release\QuickDiff.pdb
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\Resources\GlassButton.baml
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\MainWindow.g.cs
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\Views\FileItemsView.g.cs
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\App.g.cs
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\QuickDiff_MarkupCompile.cache
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\QuickDiff_MarkupCompile.lref
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\App.baml
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\MainWindow.baml
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\Views\FileItemsView.baml
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\QuickDiff.g.resources
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\QuickDiff.Properties.Resources.resources
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\QuickDiff.csproj.GenerateResource.Cache
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\QuickDiff.exe
+C:\CRCSharpProjects\QuickDiff\QuickDiff\obj\Release\QuickDiff.pdb

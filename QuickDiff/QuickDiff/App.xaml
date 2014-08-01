@@ -1,0 +1,24 @@
+﻿<Application x:Class="QuickDiff.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:tr="clr-namespace:Helpers"
+             DispatcherUnhandledException="Application_DispatcherUnhandledException"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\GlassButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <tr:AlertColorConverter x:Key="AlertColorConverter" />
+            <tr:FileIconConverter x:Key="FileIconConverter" />
+            <LinearGradientBrush x:Key="foregroundBrush" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0"
+                        Color="{DynamicResource {x:Static SystemColors.InactiveCaptionColorKey}}"/>
+                <GradientStop Offset="0.5"
+                        Color="{DynamicResource {x:Static SystemColors.InactiveCaptionColorKey}}"/>
+                <GradientStop Offset="1"
+                        Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
