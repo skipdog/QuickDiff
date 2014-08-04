@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:pf="clr-namespace:System.ComponentModel;assembly=WindowsBase"
              xmlns:h="clr-namespace:Helpers"
-             mc:Ignorable="d"  Background="Transparent"
+             mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Background="Transparent">
+    <Grid Background="#B5EBEBEB">
         <Grid.Resources>            
             <CollectionViewSource Source="{Binding Path=FileItems}" x:Key="FileItemsSortedView">
                 <CollectionViewSource.SortDescriptions>                    
@@ -54,7 +54,7 @@
         <ScrollViewer Background="Transparent" Grid.Row="1" Grid.ColumnSpan="4" Margin="3" h:ScrollSynchronizer.ScrollGroup="group1"
                       VerticalScrollBarVisibility="Auto">
             <DataGrid ItemsSource="{Binding Source={StaticResource FileItemsSortedView}}" h:SelectedIndexSynchronizer.IndexGroup="group1"
-                      GridLinesVisibility="None" AlternatingRowBackground="WhiteSmoke"
+                      GridLinesVisibility="None" AlternatingRowBackground="WhiteSmoke" ColumnWidth="Auto"
                       AutoGenerateColumns="False" SelectionMode="Single" SelectionUnit="FullRow" Background="Transparent">
                 <DataGrid.CellStyle>
                     <Style TargetType="DataGridCell">
@@ -70,10 +70,10 @@
                     </Style>
                 </DataGrid.CellStyle>
                 <DataGrid.Columns>
-                    <DataGridTemplateColumn Header="" Width="SizeToCells" IsReadOnly="True">
+                    <DataGridTemplateColumn Header="" Width="Auto" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Image Source="{Binding Path=.,Converter={StaticResource FileIconConverter}}" Width="16" Height="16">
+                                <Image Source="{Binding Path=.,Converter={StaticResource FileIconConverter}, NotifyOnTargetUpdated=True}" Width="16" Height="16">
                                     <Image.InputBindings>
                                         <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DblClickFileItem}"/>
                                     </Image.InputBindings>
@@ -81,10 +81,10 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="FileName" Width="SizeToCells" IsReadOnly="True">
+                    <DataGridTemplateColumn Header="FileName" Width="Auto" IsReadOnly="True" h:DataGridColumnResize.Width="SizeToCells">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Path=FileName}" Foreground="{Binding FileState, 
+                                <TextBlock Text="{Binding Path=FileName, NotifyOnTargetUpdated=True}" Foreground="{Binding FileState, 
                                 Converter={StaticResource AlertColorConverter}}">
                                 <TextBlock.InputBindings>
                                     <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DblClickFileItem}" />
@@ -93,10 +93,10 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Size" Width="SizeToCells" IsReadOnly="True">
+                    <DataGridTemplateColumn Header="Size" Width="Auto" IsReadOnly="True" h:DataGridColumnResize.Width="Auto">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Path=Size}" Foreground="{Binding FileState, 
+                                <TextBlock Text="{Binding Path=Size, NotifyOnTargetUpdated=True}" Foreground="{Binding FileState, 
                                 Converter={StaticResource AlertColorConverter}}">
                                 <TextBlock.InputBindings>
                                     <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DblClickFileItem}" />
@@ -105,10 +105,10 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Modified" Width="SizeToCells" IsReadOnly="True">
+                    <DataGridTemplateColumn Header="Modified" Width="Auto" IsReadOnly="True" h:DataGridColumnResize.Width="Auto">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Path=Modified}" Foreground="{Binding FileState, 
+                                <TextBlock Text="{Binding Path=Modified, NotifyOnTargetUpdated=True}" Foreground="{Binding FileState, 
                                 Converter={StaticResource AlertColorConverter}}">
                                 <TextBlock.InputBindings>
                                     <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DblClickFileItem}" />

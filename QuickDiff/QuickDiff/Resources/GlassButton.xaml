@@ -5,6 +5,7 @@
     <Style x:Key="GlassButtonSquare" TargetType="{x:Type Button}">
         <Setter Property="Padding" Value="0"/>
         <Setter Property="Margin" Value="0"/>
+        <Setter Property="Foreground" Value="Yellow"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -39,7 +40,7 @@
                                                 </TransformGroup>
                                             </RadialGradientBrush.RelativeTransform>
                                             <GradientStop Color="#B28DBDFF" Offset="0"/>
-                                            <GradientStop Color="#008DBDFF" Offset="1"/>                                            
+                                            <GradientStop Color="#008DBDFF" Offset="1"/>
                                         </RadialGradientBrush>
                                     </Border.Background>
                                 </Border>

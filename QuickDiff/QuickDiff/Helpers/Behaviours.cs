@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Reflection;
 using System.Windows.Controls.Primitives;
+using System.Windows.Threading;
 
 namespace Helpers
 {
@@ -195,5 +196,80 @@ namespace Helpers
         }
     }
 
+    public static class DataGridColumnResize
+    {
 
+        public static readonly DependencyProperty WidthProperty =
+            DependencyProperty.RegisterAttached("Width", typeof(DataGridLengthUnitType), typeof(DataGridColumnResize),
+                                                new PropertyMetadata(OnSetWidthCallback));
+
+        public static readonly DependencyProperty GridViewColumnResizeBehaviorProperty =
+            DependencyProperty.RegisterAttached("GridViewColumnResizeBehavior",
+                                                typeof(GridViewColumnResizeBehavior), typeof(DataGridColumnResize), null);
+
+        public static DataGridLengthUnitType GetWidth(DependencyObject obj)
+        {
+            return (DataGridLengthUnitType)obj.GetValue(WidthProperty);
+        }
+
+        public static void SetWidth(DependencyObject obj, DataGridLengthUnitType value)
+        {
+            obj.SetValue(WidthProperty, value);
+        }
+
+        private static void OnSetWidthCallback(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
+        {
+            DataGridColumn element = dependencyObject as DataGridColumn;
+            if (element != null)
+            {
+                GridViewColumnResizeBehavior behavior = GetOrCreateBehavior(element);
+                DataGridLengthUnitType dglut = (DataGridLengthUnitType)e.NewValue;
+                behavior.Width = dglut;
+            }
+            else
+            {
+                Console.Error.WriteLine("Error: Expected type GridViewColumn but found " +
+                                        dependencyObject.GetType().Name);
+            }
+        }
+
+        private static GridViewColumnResizeBehavior GetOrCreateBehavior(DataGridColumn element)
+        {
+            GridViewColumnResizeBehavior behavior = element.GetValue(GridViewColumnResizeBehaviorProperty) as GridViewColumnResizeBehavior;
+            if (behavior == null)
+            {
+                behavior = new GridViewColumnResizeBehavior(element);
+                element.SetValue(GridViewColumnResizeBehaviorProperty, behavior);
+            }
+
+            return behavior;
+        }
+        
+        public class GridViewColumnResizeBehavior : IDisposable
+        {
+            private readonly DataGridColumn column;
+            private readonly DispatcherTimer dt = null;
+            public DataGridLengthUnitType Width { get; set; }
+
+            public GridViewColumnResizeBehavior(DataGridColumn column)
+            {
+                this.column = column;
+                dt = new DispatcherTimer();
+                dt.Tick += new EventHandler(dt_Tick);
+                dt.Interval = new TimeSpan(0, 0, 3);
+                dt.Start();
+            }
+
+            void dt_Tick(object sender, EventArgs e)
+            {
+                column.Width = -1;
+                column.Width = new DataGridLength(0, Width);
+            }
+
+            public void Dispose()
+            {
+                dt.Tick -= new EventHandler(dt_Tick);
+            }
+        }
+    }
 }

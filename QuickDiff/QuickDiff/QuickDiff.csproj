@@ -96,7 +96,6 @@
     <Compile Include="Helpers\Converters.cs" />
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Helpers\Globals.cs" />
-    <Compile Include="Models\ApplicationItemView.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\FileItemModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
@@ -105,7 +104,7 @@
     <Compile Include="Views\FileItemsView.xaml.cs">
       <DependentUpon>FileItemsView.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -115,7 +114,7 @@
     </Compile>
     <Compile Include="Helpers\DelegateCommand.cs" />
     <Compile Include="Helpers\NotificationObject.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
